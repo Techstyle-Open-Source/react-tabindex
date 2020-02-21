@@ -1,0 +1,63 @@
+{
+  "name": "react-tabindex",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run build:dist",
+    "build:dist": "rollup -c",
+    "clean": "rimraf dist",
+    "demo": "babel-node demo.js",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "prebuild": "npm run clean",
+    "postbuild": "npm run size",
+    "prepare": "npm run build",
+    "size": "bundlesize",
+    "test": "jest --coverage",
+    "test:only": "jest"
+  },
+  "bundlesize": [
+    {
+      "path": "dist/index.cjs.min.js",
+      "compression": "none",
+      "maxSize": "1 kB"
+    },
+    {
+      "path": "dist/index.cjs.min.js",
+      "maxSize": "1 kB"
+    },
+    {
+      "path": "dist/index.esm.min.js",
+      "compression": "none",
+      "maxSize": "1 kB"
+    },
+    {
+      "path": "dist/index.esm.min.js",
+      "maxSize": "1 kB"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.0",
+    "bundlesize": "^0.18.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rollup": "^1.31.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.2.0"
+  }
+}
