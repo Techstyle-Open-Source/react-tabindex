@@ -116,11 +116,11 @@ You may be wondering: in a real app, wouldn’t you use a property like `hidden`
 or CSS like `display: none` on collapsed elements, which naturally removes any
 elements therein from the tab order? That may be the case – but you may also
 want to animate the content that is being expanded or collapsed, and _during
-that time it would incorrectly still be visible and tabbable_ – so it’s a good
-idea to still use `Untabbable` even if the final resting state of the collapsed
-content is already removed from the tab order. Other times, like with a
-carousel, the inactive items may never be set to `display: none` in the first
-place, so `Untabbable` becomes essential.
+that time it still be visible and tabbable_ – so it’s a good idea to still use
+`Untabbable` even if the final resting state of the collapsed content is already
+removed from the tab order. Other times, like with a carousel, the inactive
+items may never be set to `display: none` in the first place, so `Untabbable`
+becomes essential.
 
 ```js
 function Collapsible({ id, label, children }) {
