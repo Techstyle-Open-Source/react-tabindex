@@ -67,9 +67,9 @@ function Carousel({ activeIndex, items }) {
         {items.map((item, index) => (
           // Make all carousel items except the active one untabbable.
           // NOTE: Instead of conditionally adding/removing the `<Untabbable>`
-          // wrapper, you should instead toggle its `active` prop (otherwise, the
-          // entire subtree will be remounted each time, since the structure is
-          // changing).
+          // wrapper, you should instead toggle its `active` prop (otherwise,
+          // React will remount the entire subtree each time, since the
+          // structure is changing).
           <Untabbable active={index !== activeIndex} key={item.key}>
             <li className="slide">{item}</li>
           </Untabbable>
