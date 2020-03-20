@@ -1,6 +1,8 @@
 {
   "name": "react-tabindex",
   "version": "0.0.0",
+  "author": "TechStyle Open Source <tfg.devops@techstyle.com>",
+  "repository": "Techstyle-Open-Source/react-tabindex",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=10.0.0"
