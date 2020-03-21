@@ -17,7 +17,6 @@
     "build": "npm run build:dist",
     "build:dist": "rollup -c",
     "clean": "rimraf dist",
-    "demo": "babel-node demo.js",
     "format": "prettier --write \"**/*.{js,json,md}\"",
     "prebuild": "npm run clean",
     "postbuild": "npm run size",
