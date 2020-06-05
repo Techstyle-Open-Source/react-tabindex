@@ -22,9 +22,10 @@ $ npm install react-tabindex
 
 ## What does it do?
 
-The `useTabIndex` hook returns a value to pass to the `tabIndex` prop on elements
-of your choosing. If wrapped in an active `<Untabbable>` ancestor, that `tabIndex`
-value will automatically be set to `-1`, making the elements untabbable.
+The `useTabIndex` hook returns a value to pass to the `tabIndex` prop on
+elements of your choosing. If wrapped in an active `<Untabbable>` ancestor, that
+`tabIndex` value will automatically be set to `-1`, making the elements
+untabbable.
 
 ## Usage
 
