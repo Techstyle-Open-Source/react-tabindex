@@ -11,7 +11,7 @@ Sanely manage <kbd>Tab</kbd> accessibility in React with `<Untabbable>` and the
   declarative React.
 - Less than 1 kB minified, no dependencies.
 
-## Usage
+## Installation
 
 Install with your choice of package manager:
 
@@ -19,6 +19,14 @@ Install with your choice of package manager:
 $ yarn add react-tabindex
 $ npm install react-tabindex
 ```
+
+## What does it do?
+
+The `useTabIndex` hook returns a value to pass to the `tabIndex` prop on elements
+of your choosing. If wrapped in an active `<Untabbable>` ancestor, that `tabIndex`
+value will automatically be set to `-1`, making the elements untabbable.
+
+## Usage
 
 ### useTabIndex
 
